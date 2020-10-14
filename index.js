@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 const bot = new discord.Client();
 
-const token = 'NzY1NjI2OTU2OTY3ODM3NzE3.X4Xjqw.2LAWE9k1tKaF_KKPJEqYal6dylU';
+const token = 'NzY1NjI2OTU2OTY3ODM3NzE3.X4Xjqw.A3CDUp_O2eX73huXUe2Ouktm5dE';
 
 bot.on('ready', () => {
     console.log('Bot is online');
