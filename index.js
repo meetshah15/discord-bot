@@ -42,7 +42,7 @@ const emojiMap = {
     'FLIRTATION': '💋',
     'TOXICITY': '🧨',
     'INSULT': '👊',
-    'INCOHERENT': '🤪',
+    // 'INCOHERENT': '🤪',
     'SPAM': '🐟',
 };
 
@@ -84,6 +84,7 @@ async function evaluateMessage(message) {
     const userid = message.author.id;
 
     for (const attribute in emojiMap) {
+        console.log('For ' + attribute + ': ' + scores[attribute]);
         if (scores[attribute]) {
             message.react(emojiMap[attribute]);
             users[userid][attribute] =
