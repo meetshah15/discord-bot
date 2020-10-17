@@ -162,13 +162,13 @@ client.on('message', async (message) => {
         message.channel.send(karma ? karma : 'No karma yet!');
     }
 
-    if (message.content.indexOf('scrabble stop')) {
-        scrabbleComment = false;
-        message.channel.send('Adios Amigos 🐟');
-    } else if (message.content.indexOf('scrabble start')) {
-        scrabbleComment = true;
-        message.channel.send('Olaa 🤪');
-    }
+    // if (message.content.indexOf('scrabble stop')) {
+    //     scrabbleComment = false;
+    //     message.channel.send('Adios Amigos 🐟');
+    // } else if (message.content.indexOf('scrabble start')) {
+    //     scrabbleComment = true;
+    //     message.channel.send('Olaa 🤪');
+    // }
 
     if (message.content.indexOf('-p ') !== -1 && scrabbleComment) {
         index = Math.floor(Math.random() * 10);
