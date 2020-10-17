@@ -157,7 +157,7 @@ client.on('message', async (message) => {
 
     if (message.content.indexOf('-p ') !== -1) {
         index = Math.floor(Math.random() * 10);
-        msg.channel.send(messageList[index]);
+        message.channel.send(messageList[index]);
     }
 });
 
