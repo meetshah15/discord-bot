@@ -4,6 +4,8 @@ const perspective = require('./perspective.js');
 
 const token = process.env.token;
 
+let scrabbleComment = true;
+
 const messageList = [
     'Oh wonderful choice',
     'I don\'t like this song',
@@ -14,7 +16,12 @@ const messageList = [
     'I like this one',
     'C\'mon, you can do better',
     'Now thats what Im talking about.',
-    'Awesome!!!'
+    'Awesome!!!',
+    'Blah Bluh Bleh',
+    'Nooooooo',
+    'Yesssss!!',
+    'Thank you.',
+    'OMGGG'
 ]
 
 // bot.login(token);
@@ -155,7 +162,15 @@ client.on('message', async (message) => {
         message.channel.send(karma ? karma : 'No karma yet!');
     }
 
-    if (message.content.indexOf('-p ') !== -1) {
+    if (message.content.indexOf('scrabble stop')) {
+        scrabbleComment = false;
+        message.channel.send('Adios Amigos 🐟');
+    } else if (message.content.indexOf('scrabble start')) {
+        scrabbleComment = true;
+        message.channel.send('Olaa 🤪');
+    }
+
+    if (message.content.indexOf('-p ') !== -1 && scrabbleComment) {
         index = Math.floor(Math.random() * 10);
         message.channel.send(messageList[index]);
     }
