@@ -152,7 +152,7 @@ client.on('message', async (message) => {
     if (shouldKick) {
         // kickBaddie(message.author, message.guild);
         // delete users[message.author.id];
-        message.channel.send(`${message.author.username} should be kicked from channel`);
+        // message.channel.send(`${message.author.username} should be kicked from channel`);
         // return;
     }
 
